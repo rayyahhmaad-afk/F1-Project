@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>McLaren Racing | The Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;700;800;900&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-white text-dark antialiased">
+
+    <!-- TopNavBar -->
+    <nav class="sticky top-0 w-full bg-white border-b border-gray-200 z-50">
+        <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+            <div class="flex items-center gap-12">
+                <a href="index.html">
+                    <img src="img/logo/mclaren-formula-1-team-seeklogo.svg" alt="McLaren Racing Logo" class="h-6 md:h-8 object-contain" />
+                </a>
+                <div class="hidden lg:flex gap-8">
+                    <a class="text-sm font-bold uppercase tracking-wide text-gray-500 hover:text-dark transition-colors" href="index.html">Racing</a>
+                    <a class="text-sm font-bold uppercase tracking-wide text-gray-500 hover:text-dark transition-colors" href="fans.html">Fans</a>
+                    <a class="text-sm font-bold uppercase tracking-wide text-gray-500 hover:text-dark transition-colors" href="shop.html">Shop</a>
+                    <a class="text-sm font-bold uppercase tracking-wide text-gray-500 hover:text-dark transition-colors" href="mclaren-plus.html">McLaren Plus</a>
+                    <a class="text-sm font-bold uppercase tracking-wide border-b-2 border-papaya pb-1 text-dark" href="team.html">Team</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="hidden md:block bg-papaya text-white px-6 py-2 text-sm font-bold clip-slanted-button hover:bg-orange-600 transition-colors">McLAREN+</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TEAM HERO SECTION -->
+    <section class="relative w-full h-[60vh] md:h-[70vh] bg-dark flex flex-col justify-end overflow-hidden pb-16">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-60" src="https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2070&auto=format&fit=crop" alt="McLaren Team" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent z-0"></div>
+        
+        <div class="relative z-10 px-8 md:px-12 max-w-7xl mx-auto w-full fade-in-up">
+            <p class="text-white text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+                <span class="w-3 h-3 bg-papaya clip-slanted inline-block"></span> THE TEAM
+            </p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase leading-none tracking-tighter mb-4">
+                United By <br><span class="text-papaya">Racing.</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="py-20 px-8 max-w-4xl mx-auto bg-white text-center fade-in-up">
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed mb-6 font-medium">
+            After our first taste of Formula 1 victory at the 1968 Belgian Grand Prix, McLaren has gone on to secure 203 Grand Prix wins, winning 13 Drivers' World Championships and 10 Constructors' World Championships.
+        </p>
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed font-medium">
+            Whether it’s the F1 drivers on track, mechanics in the garage, the management team on the pit wall or engineers in the MTC, we are united by bravery, ingenuity and the thrill of the chase.
+        </p>
+    </section>
+
+    <!-- DRIVERS SECTION -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-gray-50 border-y border-gray-200">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Formula 1 Drivers</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Lando Norris Card -->
+            <div class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl" style="transition-delay: 100ms;">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" src="img/driver/Lando%20Norris%20%2726-desktop.jpg" onerror="this.src='https://images.unsplash.com/photo-1536259020464-9a8ffb26e031?q=80&w=1000&auto=format&fit=crop'" alt="Lando Norris" />
+                <div class="absolute -bottom-10 -right-4 text-[12rem] font-black text-white/10 z-0 transition-transform duration-700 group-hover:scale-110 pointer-events-none">04</div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-10"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                    <div class="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <p class="text-papaya font-bold text-2xl mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">#04</p>
+                        <h3 class="text-white text-5xl font-black uppercase mb-4 tracking-tighter">Lando<br>Norris</h3>
+                        <div class="w-0 group-hover:w-16 h-1 bg-papaya transition-all duration-500 mb-6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oscar Piastri Card -->
+            <div class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl mt-0 md:mt-16" style="transition-delay: 200ms;">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" src="img/driver/Oscar%20Piastri%20%2726-desktop.jpg" onerror="this.src='https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1000&auto=format&fit=crop'" alt="Oscar Piastri" />
+                <div class="absolute -bottom-10 -right-4 text-[12rem] font-black text-white/10 z-0 transition-transform duration-700 group-hover:scale-110 pointer-events-none">81</div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-10"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                    <div class="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <p class="text-papaya font-bold text-2xl mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">#81</p>
+                        <h3 class="text-white text-5xl font-black uppercase mb-4 tracking-tighter">Oscar<br>Piastri</h3>
+                        <div class="w-0 group-hover:w-16 h-1 bg-papaya transition-all duration-500 mb-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP SECTION -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-white">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Formula 1 Leadership</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
+            <!-- Leadership Members -->
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Zak+Brown&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Zak Brown" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Zak Brown</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Andrea+Stella&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Andrea Stella" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Andrea Stella</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Laura+Bowden&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Laura Bowden" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Laura Bowden</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Daniel+Gallo&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Daniel Gallo" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Daniel Gallo</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Louise+McEwen&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Louise McEwen" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Louise McEwen</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Matt+Dennington&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Matt Dennington" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Matt Dennington</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Nick+Martin&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Nick Martin" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Nick Martin</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Alessandro+Alunni+Bravi&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Alessandro Alunni Bravi" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Alessandro Alunni Bravi</h3>
+                <p class="text-xs text-gray-500 mt-2 font-bold uppercase tracking-wider">Chief Business Affairs Officer</p>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 shadow-xl border-4 border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Chloe+Todd&background=111111&color=FF8000&size=200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Chloe Todd" />
+                </div>
+                <h3 class="text-lg md:text-xl font-black uppercase text-dark">Chloe Todd</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- MANAGEMENT SECTION -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-gray-50 border-y border-gray-200">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Formula 1 Management</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-5xl mx-auto">
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Peter+Prodromou&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Peter Prodromou" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Peter Prodromou</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Rob+Marshall&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Rob Marshall" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Rob Marshall</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Neil+Houldey&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Neil Houldey" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Neil Houldey</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Mark+Temple&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Mark Temple" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Mark Temple</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVE AND DEVELOPMENT DRIVERS -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-white">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Reserve & Development Drivers</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <!-- Pato O'Ward -->
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Pato+O+Ward&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Pato O'Ward" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Pato O'Ward</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Leonardo+Fornaroli&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Leonardo Fornaroli" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Leonardo Fornaroli</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Gregoire+Saucy&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Grégoire Saucy" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Grégoire Saucy</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Richard+Verschoor&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Richard Verschoor" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Richard Verschoor</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Matteo+De+Palo&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Matteo De Palo" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Matteo De Palo</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Ella+Lloyd&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Ella Lloyd" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Ella Lloyd</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Ella+Stevens&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Ella Stevens" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Ella Stevens</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Dries+Van+Langendonck&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Dries Van Langendonck" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Dries Van Langendonck</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Christian+Costoya&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Christian Costoya" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Christian Costoya</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Ella+Hakkinen&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Ella Häkkinen" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Ella Häkkinen</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 shadow-sm border border-gray-100 group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Harry+Williams&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Harry Williams" />
+                </div>
+                <h3 class="text-sm font-black uppercase text-dark">Harry Williams</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEST AND SIMULATOR DRIVERS -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-gray-50 border-y border-gray-200">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Test & Simulator Drivers</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Will+Stevens&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Will Stevens" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Will Stevens</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Jake+Hughes&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Jake Hughes" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Jake Hughes</h3>
+            </div>
+            <div class="flex flex-col items-center text-center group fade-in-up">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-6 shadow-md border-2 border-transparent group-hover:border-papaya transition-colors duration-300">
+                    <img src="https://ui-avatars.com/api/?name=Nyck+de+Vries&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Nyck de Vries" />
+                </div>
+                <h3 class="text-lg font-black uppercase text-dark">Nyck de Vries</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS SECTION -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-white">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Formula 1 Partners</h2>
+            <div class="w-20 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 fade-in-up text-center">
+            <!-- Partners list -->
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">OKX</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Mastercard</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Google</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">British American Tobacco</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">DP World</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Allwyn</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Cisco</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Dell Technologies</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Android</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Gemini</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">PUMA</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Intel</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Monster Energy</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Etihad</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Deloitte</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Ecolab</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Okta</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Jack Daniel's</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">Arrow Electronics</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Chrome</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Google Cloud</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">Stanley Black & Decker</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Goldman Sachs</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Workday</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Iron Mountain</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Richard Mille</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Hilton</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">Schneider Electric</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Groq</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">FxPro</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Hedera</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">ONEflight</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Rubrik</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Splunk</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Liquid IV</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Dropbox</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Greene Tweed</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">Optimum Nutrition</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">T-Mobile</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Freshworks</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Motul</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Udemy</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Alteryx</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Smartsheet</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Airwallex</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Medallia</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">LEGO</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">TUMI</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Reiss</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">CNBC</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest text-[10px]">AkzoNobel-Sikkens</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Alpinestars</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Pirelli</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">KAUST</span>
+            </div>
+            <div class="p-4 bg-gray-50 border border-gray-100 flex items-center justify-center min-h-[80px] hover:border-papaya transition-colors">
+                <span class="font-bold text-gray-500 text-xs uppercase tracking-widest">Ashurst</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark pt-24 pb-8 border-t border-white/10 relative overflow-hidden">
+        <!-- Faint huge background text -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/5 whitespace-nowrap pointer-events-none select-none z-0 tracking-tighter">
+            MCLAREN RACING
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <!-- Top Section: Newsletter & Socials -->
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24 border-b border-white/10 pb-16">
+                <!-- Newsletter -->
+                <div class="max-w-xl">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter text-white">Stay Ahead of<br>the Grid.</h2>
+                    <p class="text-gray-400 mb-8 font-medium">Join McLaren Plus to get the latest news, exclusive content, and behind-the-scenes access.</p>
+                    <div class="flex flex-col sm:flex-row gap-2 w-full">
+                        <input type="email" placeholder="Your email address" class="bg-white/5 border border-white/20 text-white px-6 py-4 w-full focus:outline-none focus:border-papaya transition-colors placeholder:text-gray-500 font-medium rounded-sm">
+                        <button class="bg-papaya text-white font-bold px-8 py-4 uppercase tracking-widest hover:bg-orange-600 transition-colors clip-slanted-button shrink-0 mt-2 sm:mt-0">Subscribe</button>
+                    </div>
+                </div>
+                
+                <!-- Socials & Logo -->
+                <div class="flex flex-col items-start lg:items-end gap-12">
+                    <div class="flex flex-col items-start lg:items-end gap-2">
+                        <img src="img/logo/mclaren-formula-1-team-seeklogo.svg" alt="McLaren Racing" class="h-10 object-contain invert brightness-0" />
+                        <svg class="w-10 h-8 text-papaya fill-current" viewBox="0 0 24 24">
+                            <path d="M1,21 C6,18 10,12 12,5 C12,12 16,17 22,21 Z"/>
+                        </svg>
+                    </div>
+                    <div class="flex gap-4 text-white">
+                        <a href="#" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-papaya transition-all duration-300 hover:scale-110 group">
+                            <span class="text-xl font-bold opacity-70 group-hover:opacity-100">X</span>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-papaya transition-all duration-300 hover:scale-110 group">
+                            <span class="text-xl font-bold opacity-70 group-hover:opacity-100">IG</span>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-papaya transition-all duration-300 hover:scale-110 group">
+                            <span class="text-xl font-bold opacity-70 group-hover:opacity-100">FB</span>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-papaya transition-all duration-300 hover:scale-110 group">
+                            <span class="text-xl font-bold opacity-70 group-hover:opacity-100">YT</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Section: Link Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-papaya font-bold uppercase tracking-widest text-sm mb-2">Company</h4>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Racing Careers</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Sustainability</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">McLaren Golf</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Wallpapers</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Corporate</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Media Centre</a>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-papaya font-bold uppercase tracking-widest text-sm mb-2">Legal</h4>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Anti-slavery Statement</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Tax Strategy</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Cookie Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Terms of Use</a>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-papaya font-bold uppercase tracking-widest text-sm mb-2">Contact</h4>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10">
+                <div class="flex items-center gap-3 font-bold text-xs uppercase tracking-widest text-gray-500">
+                    <span class="w-2 h-2 bg-papaya inline-block"></span>
+                    McLAREN RACING @2026
+                </div>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-12 h-12 bg-white/5 flex items-center justify-center hover:bg-papaya transition-colors rounded-full group">
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Fixed Feedback Button -->
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 bg-papaya text-white text-xs font-bold uppercase tracking-widest py-3 px-1.5 rotate-180 hover:bg-orange-600 transition-colors cursor-pointer z-50" style="writing-mode: vertical-rl;">
+        Feedback
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

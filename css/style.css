@@ -1,0 +1,41 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: 'Anybody', sans-serif;
+}
+
+.clip-slanted {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.clip-slanted-button {
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
