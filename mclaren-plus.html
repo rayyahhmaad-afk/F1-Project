@@ -93,41 +93,172 @@
         </div>
     </section>
 
-    <!-- FORM SECTION -->
-    <section class="py-20 px-8 max-w-4xl mx-auto fade-in-up">
-        <div class="bg-white/5 border border-white/10 p-12 rounded-sm shadow-2xl relative overflow-hidden">
+    <!-- MEMBERSHIP SECTION -->
+    <section class="py-20 px-8 max-w-4xl mx-auto fade-in-up" id="membership-section">
+        <!-- REGISTRATION FORM -->
+        <div id="registration-container" class="bg-white/5 border border-white/10 p-12 rounded-sm shadow-2xl relative overflow-hidden transition-all duration-500">
             <div class="absolute -top-24 -right-24 w-64 h-64 bg-papaya/20 rounded-full blur-[80px] pointer-events-none"></div>
             
-            <h2 class="text-4xl font-black uppercase text-white mb-2">Create Account</h2>
-            <p class="text-gray-400 mb-8">Join the Papaya Army today.</p>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 relative z-10 gap-4">
+                <div>
+                    <h2 class="text-4xl font-black uppercase text-white mb-2">Create Account</h2>
+                    <p class="text-gray-400">Join the Papaya Army today.</p>
+                </div>
+                <div class="text-sm font-bold text-papaya uppercase tracking-widest bg-papaya/10 px-4 py-2 rounded-full border border-papaya/30" id="step-indicator">Step 1 of 2</div>
+            </div>
             
-            <form class="space-y-6 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">First Name</label>
-                        <input type="text" class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+            <form id="registration-form" class="space-y-6 relative z-10">
+                <!-- Step 1: Personal Details -->
+                <div id="form-step-1" class="transition-opacity duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">First Name</label>
+                            <input type="text" id="reg-fname" required class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Last Name</label>
+                            <input type="text" id="reg-lname" required class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Last Name</label>
-                        <input type="text" class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Email Address</label>
+                        <input type="email" id="reg-email" required class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+                        <p id="email-error" class="text-red-500 text-xs mt-2 hidden">Please enter a valid email address.</p>
+                    </div>
+                    <button type="button" id="btn-next-step" class="w-full bg-papaya text-white font-bold px-10 py-4 uppercase tracking-widest hover:bg-orange-600 transition-all duration-300 clip-slanted-button mt-4">
+                        Next Step
+                    </button>
+                </div>
+
+                <!-- Step 2: Account Security -->
+                <div id="form-step-2" class="hidden transition-opacity duration-300">
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Password</label>
+                        <input type="password" id="reg-password" required class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
+                        
+                        <!-- Password Strength Meter -->
+                        <div class="mt-3 flex gap-2 h-1.5 w-full">
+                            <div id="strength-1" class="flex-1 bg-white/10 rounded-full transition-colors"></div>
+                            <div id="strength-2" class="flex-1 bg-white/10 rounded-full transition-colors"></div>
+                            <div id="strength-3" class="flex-1 bg-white/10 rounded-full transition-colors"></div>
+                        </div>
+                        <p id="strength-text" class="text-xs text-gray-500 mt-2 font-medium">Enter at least 8 characters</p>
+                    </div>
+                    <div class="flex items-start gap-3 mt-4 mb-6">
+                        <input type="checkbox" id="reg-terms" required class="mt-1 cursor-pointer">
+                        <label for="reg-terms" class="text-sm text-gray-400 leading-relaxed cursor-pointer">I agree to the Terms of Use and Privacy Policy. I would like to receive news, updates, and exclusive offers from McLaren Racing.</label>
+                    </div>
+                    <div class="flex gap-4">
+                        <button type="button" id="btn-prev-step" class="bg-white/10 text-white font-bold px-6 py-4 uppercase tracking-widest hover:bg-white/20 transition-all duration-300 clip-slanted-button">
+                            Back
+                        </button>
+                        <button type="submit" id="btn-submit-reg" class="flex-1 bg-papaya text-white font-bold px-10 py-4 uppercase tracking-widest hover:bg-orange-600 transition-all duration-300 clip-slanted-button">
+                            Create Account
+                        </button>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Email Address</label>
-                    <input type="email" class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Password</label>
-                    <input type="password" class="w-full bg-dark border border-white/20 text-white px-4 py-3 focus:outline-none focus:border-papaya transition-colors rounded-sm">
-                </div>
-                <div class="flex items-start gap-3 mt-4">
-                    <input type="checkbox" id="terms" class="mt-1">
-                    <label for="terms" class="text-sm text-gray-400 leading-relaxed">I agree to the Terms of Use and Privacy Policy. I would like to receive news, updates, and exclusive offers from McLaren Racing.</label>
-                </div>
-                <button type="button" class="w-full bg-papaya text-white font-bold px-10 py-4 uppercase tracking-widest hover:bg-orange-600 transition-all duration-300 clip-slanted-button mt-4">
-                    Create Account
-                </button>
             </form>
+        </div>
+
+        <!-- MEMBER DASHBOARD CARD (Hidden by default) -->
+        <div id="member-card-container" class="hidden">
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <!-- Digital Card -->
+                <div class="flex-1 relative rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,128,0,0.15)] group backdrop-blur-xl bg-white/5 border border-white/20">
+                    <!-- Glassmorphism Effects -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/50 z-0"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-papaya/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-papaya/30 transition-all duration-500"></div>
+                    <!-- Carbon Fibre Texture (simulated with CSS pattern if image not available, using a placeholder image link or CSS radial gradients) -->
+                    <div class="absolute inset-0 opacity-10 mix-blend-overlay z-0" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                    <div class="relative z-10 p-8 flex flex-col h-full justify-between min-h-[300px]">
+                        <div class="flex justify-between items-start mb-12">
+                            <img src="img/logo/mclaren-formula-1-team-seeklogo.svg" alt="McLaren Plus Logo" class="h-8 object-contain invert brightness-0" />
+                            <div class="text-right">
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Status</p>
+                                <p class="text-xs font-black text-papaya uppercase tracking-widest px-3 py-1 bg-papaya/10 border border-papaya/30 rounded-full inline-block">Active Plus</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Member Name</p>
+                            <h3 id="card-name" class="text-3xl font-black text-white uppercase tracking-tighter mb-6">Member</h3>
+                            
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Member ID</p>
+                                    <p id="card-id" class="text-lg font-mono text-gray-200">#MCL-2026-00000</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Joined</p>
+                                    <p id="card-date" class="text-sm font-bold text-gray-200">JUL 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions Sidebar -->
+                <div class="w-full md:w-64 flex flex-col gap-4">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl flex-1 flex flex-col items-center justify-center text-center">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Your Digital Pass</p>
+                        <!-- Fake QR -->
+                        <div class="bg-white p-2 rounded-md mb-2">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=McLarenPlusPass&color=111111" alt="QR Code" class="w-24 h-24 opacity-90" />
+                        </div>
+                        <p class="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Scan at GP Events</p>
+                    </div>
+                    <button id="btn-sign-out" class="w-full bg-white/5 border border-white/10 text-white font-bold py-4 uppercase tracking-widest hover:bg-red-500/20 hover:border-red-500/50 hover:text-red-400 transition-colors rounded-xl text-sm">
+                        Sign Out
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="py-16 px-8 max-w-4xl mx-auto border-t border-white/10">
+        <h2 class="text-3xl font-black uppercase text-white mb-8 text-center tracking-tight">Benefits & FAQs</h2>
+        
+        <div class="space-y-4" id="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="faq-item border border-white/10 bg-white/5 rounded-sm overflow-hidden">
+                <button class="faq-header w-full flex justify-between items-center p-6 text-left focus:outline-none hover:bg-white/10 transition-colors">
+                    <span class="text-lg font-bold text-white uppercase tracking-tight">Is McLaren Plus really free?</span>
+                    <svg class="faq-icon w-6 h-6 text-papaya transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-6 pt-0 text-gray-400 leading-relaxed">
+                        Yes! McLaren Plus is our official fan program and is completely free to join. There are no hidden fees or subscription costs. It's our way of bringing the Papaya Army closer to the team.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ 2 -->
+            <div class="faq-item border border-white/10 bg-white/5 rounded-sm overflow-hidden">
+                <button class="faq-header w-full flex justify-between items-center p-6 text-left focus:outline-none hover:bg-white/10 transition-colors">
+                    <span class="text-lg font-bold text-white uppercase tracking-tight">How do I access member-only content?</span>
+                    <svg class="faq-icon w-6 h-6 text-papaya transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-6 pt-0 text-gray-400 leading-relaxed">
+                        Once registered, simply make sure you are signed in. Your digital member card will act as your pass. Exclusive content, wallpapers, and behind-the-scenes videos will automatically unlock across the site.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item border border-white/10 bg-white/5 rounded-sm overflow-hidden">
+                <button class="faq-header w-full flex justify-between items-center p-6 text-left focus:outline-none hover:bg-white/10 transition-colors">
+                    <span class="text-lg font-bold text-white uppercase tracking-tight">How do the store discounts work?</span>
+                    <svg class="faq-icon w-6 h-6 text-papaya transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-6 pt-0 text-gray-400 leading-relaxed">
+                        As a McLaren Plus member, your discount is automatically applied to eligible items in the McLaren Store when you are logged in. You will also receive email notifications for early access to new merchandise drops.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -226,6 +357,7 @@
         Feedback
     </div>
     <script src="js/main.js"></script>
+    <script src="js/mclaren-plus.js"></script>
 </body>
 
 </html>

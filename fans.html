@@ -94,6 +94,126 @@
         </div>
     </section>
 
+
+    <!-- FAN ZONE (POLL & QUIZ) -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-light border-t border-b border-gray-200">
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark mb-4 tracking-tighter">Fan Zone</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Get involved, test your knowledge, and vote on the hot topics direct from the pit wall.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- POLL WIDGET -->
+            <div id="fan-poll-widget" class="bg-dark text-white p-8 md:p-10 rounded-sm shadow-2xl flex flex-col justify-between border-l-4 border-papaya fade-in-up" style="transition-delay: 100ms;">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 bg-papaya text-white text-xs font-bold uppercase tracking-wider rounded-sm">F1 Opinion Poll</span>
+                        <span class="text-xs text-gray-400 font-medium">Updated weekly</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase mb-8 tracking-tight text-white leading-tight">Favorite McLaren Livery of the Modern Era?</h3>
+                    
+                    <!-- Voting Options State -->
+                    <div id="poll-options" class="space-y-4">
+                        <button onclick="votePoll(0)" class="w-full text-left border border-white/10 hover:border-papaya hover:bg-white/5 bg-white/5 transition-all duration-300 rounded-sm px-6 py-4 flex justify-between items-center group">
+                            <span class="font-bold text-gray-200 group-hover:text-white transition-colors">Classic Papaya & Blue (MCL38/MCL40)</span>
+                            <svg class="w-5 h-5 text-gray-500 group-hover:text-papaya group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                        <button onclick="votePoll(1)" class="w-full text-left border border-white/10 hover:border-papaya hover:bg-white/5 bg-white/5 transition-all duration-300 rounded-sm px-6 py-4 flex justify-between items-center group">
+                            <span class="font-bold text-gray-200 group-hover:text-white transition-colors">Stealth Mode (Singapore Special)</span>
+                            <svg class="w-5 h-5 text-gray-500 group-hover:text-papaya group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                        <button onclick="votePoll(2)" class="w-full text-left border border-white/10 hover:border-papaya hover:bg-white/5 bg-white/5 transition-all duration-300 rounded-sm px-6 py-4 flex justify-between items-center group">
+                            <span class="font-bold text-gray-200 group-hover:text-white transition-colors">Triple Crown Tribute (Monaco '23)</span>
+                            <svg class="w-5 h-5 text-gray-500 group-hover:text-papaya group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                        <button onclick="votePoll(3)" class="w-full text-left border border-white/10 hover:border-papaya hover:bg-white/5 bg-white/5 transition-all duration-300 rounded-sm px-6 py-4 flex justify-between items-center group">
+                            <span class="font-bold text-gray-200 group-hover:text-white transition-colors">Chrome Legacy (British GP '23)</span>
+                            <svg class="w-5 h-5 text-gray-500 group-hover:text-papaya group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- Results State (Hidden by default, shown by JS) -->
+                    <div id="poll-results" class="hidden space-y-6">
+                        <!-- Result item 1 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 text-sm font-bold">
+                                <span class="text-gray-300">Classic Papaya & Blue (MCL38/MCL40)</span>
+                                <span id="poll-pct-0">0%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+                                <div id="poll-bar-0" class="bg-papaya h-full w-0 transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <!-- Result item 2 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 text-sm font-bold">
+                                <span class="text-gray-300">Stealth Mode (Singapore Special)</span>
+                                <span id="poll-pct-1">0%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+                                <div id="poll-bar-1" class="bg-white/40 h-full w-0 transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <!-- Result item 3 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 text-sm font-bold">
+                                <span class="text-gray-300">Triple Crown Tribute (Monaco '23)</span>
+                                <span id="poll-pct-2">0%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+                                <div id="poll-bar-2" class="bg-white/40 h-full w-0 transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                        <!-- Result item 4 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 text-sm font-bold">
+                                <span class="text-gray-300">Chrome Legacy (British GP '23)</span>
+                                <span id="poll-pct-3">0%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-3 rounded-full overflow-hidden">
+                                <div id="poll-bar-3" class="bg-white/40 h-full w-0 transition-all duration-1000 ease-out"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poll Footer/Notice -->
+                <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center">
+                    <span id="poll-status" class="text-xs font-bold text-gray-400">Cast your vote to see results!</span>
+                    <button id="reset-poll-btn" onclick="resetPoll()" class="hidden text-xs text-papaya hover:text-orange-400 font-bold uppercase tracking-wider transition-colors">Reset Vote</button>
+                </div>
+            </div>
+
+            <!-- TRIVIA QUIZ WIDGET -->
+            <div id="trivia-widget" class="bg-dark text-white p-8 md:p-10 rounded-sm shadow-2xl flex flex-col justify-between border-l-4 border-white fade-in-up" style="transition-delay: 200ms;">
+                <!-- Quiz Heading -->
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-white text-dark text-xs font-bold uppercase tracking-wider rounded-sm">McLaren IQ</span>
+                        <span id="quiz-question-number" class="text-xs text-gray-400 font-medium">Question 1 of 3</span>
+                    </div>
+                    <div id="quiz-score-badge" class="hidden text-xs font-bold text-papaya uppercase tracking-wider">Score: <span id="quiz-score-num">0</span>/3</div>
+                </div>
+
+                <!-- Quiz Interactive Container -->
+                <div id="quiz-container" class="min-h-[220px] flex flex-col justify-center">
+                    <div id="quiz-question-box">
+                        <h3 id="quiz-question" class="text-xl md:text-2xl font-bold uppercase mb-6 tracking-tight leading-snug">In what year did Bruce McLaren found the legendary team?</h3>
+                        <div id="quiz-options" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Options will be generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Actions / Scorecard Footer -->
+                <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center min-h-[50px]">
+                    <span id="quiz-feedback" class="text-xs font-bold text-gray-400">Select an answer to progress.</span>
+                    <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="hidden bg-white text-dark hover:bg-gray-200 transition-colors px-6 py-2.5 text-xs font-bold uppercase tracking-wider clip-slanted-button">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PAPAYA MOMENTS (FAN FEED) -->
     <section class="py-24 bg-dark relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-8 relative z-10">
@@ -107,25 +227,143 @@
                 </a>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up" style="transition-delay: 200ms;">
-                <div class="aspect-square bg-gray-800 rounded-sm overflow-hidden group cursor-pointer relative shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1540829016269-e05670f88adb?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" alt="Fan photo">
-                    <div class="absolute inset-0 bg-papaya/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            <div id="moments-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-up" style="transition-delay: 200ms;">
+                <!-- Dynamically rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITAL DOWNLOAD CENTER -->
+    <section class="py-24 px-8 max-w-7xl mx-auto bg-white border-t border-gray-200">
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark mb-4 tracking-tighter">Digital Downloads</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Download exclusive ultra-high resolution wallpapers for your desktop or mobile devices.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Wallpaper 1 -->
+            <div class="bg-light border border-gray-200 rounded-sm overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all duration-300 fade-in-up" style="transition-delay: 100ms;">
+                <div class="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" src="https://images.unsplash.com/photo-1540039155732-d6741b6877b0?q=80&w=800" alt="MCL40 Wallpaper" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 text-xs font-bold text-white uppercase tracking-widest bg-papaya/90 px-2 py-1 rounded-sm">Official Render</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold uppercase mb-2 text-dark tracking-tight">MCL40 Track Debut</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Capture the raw power of the MCL40 hitting the asphalt for the first time during testing.</p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <!-- Resolution selector -->
+                        <div class="flex justify-between items-center">
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider font-semibold">Resolution</label>
+                            <select id="res-select-0" class="bg-white border border-gray-300 text-dark px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm focus:outline-none focus:border-papaya cursor-pointer">
+                                <option value="desktop">Desktop (3840x2160)</option>
+                                <option value="mobile">Mobile (1080x1920)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Download Button & Progress Bar container -->
+                        <div class="relative">
+                            <button id="dl-btn-0" onclick="startDownload(0)" class="w-full bg-dark text-white hover:bg-papaya font-bold py-3 px-6 text-xs uppercase tracking-widest transition-colors clip-slanted-button flex justify-center items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download Wallpaper
+                            </button>
+                            
+                            <!-- Progress overlay (hidden until download starts) -->
+                            <div id="dl-progress-container-0" class="hidden absolute inset-0 bg-dark text-white font-bold text-xs uppercase tracking-wider flex items-center justify-between px-6 clip-slanted-button overflow-hidden">
+                                <div id="dl-progress-bar-0" class="absolute left-0 top-0 bottom-0 bg-papaya/30 w-0 transition-all duration-300"></div>
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <svg class="animate-spin h-3.5 w-3.5 text-papaya" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                    Downloading...
+                                </span>
+                                <span id="dl-progress-pct-0" class="relative z-10 text-papaya">0%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="aspect-[3/4] bg-gray-800 rounded-sm overflow-hidden group cursor-pointer relative shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1562143131-0164627d35dc?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" alt="Fan photo">
-                    <div class="absolute inset-0 bg-papaya/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            <!-- Wallpaper 2 -->
+            <div class="bg-light border border-gray-200 rounded-sm overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all duration-300 fade-in-up" style="transition-delay: 200ms;">
+                <div class="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=800" alt="Lando Norris Wallpaper" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 text-xs font-bold text-white uppercase tracking-widest bg-papaya/90 px-2 py-1 rounded-sm">Monaco Winner</span>
                 </div>
-                <div class="aspect-square bg-gray-800 rounded-sm overflow-hidden group cursor-pointer relative shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" alt="Fan photo">
-                    <div class="absolute inset-0 bg-papaya/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold uppercase mb-2 text-dark tracking-tight">Lando Norris Monaco Victory</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Commemorate Lando's historic victory at the streets of Monte Carlo, flying the papaya colors high.</p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <!-- Resolution selector -->
+                        <div class="flex justify-between items-center">
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider font-semibold">Resolution</label>
+                            <select id="res-select-1" class="bg-white border border-gray-300 text-dark px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm focus:outline-none focus:border-papaya cursor-pointer">
+                                <option value="desktop">Desktop (3840x2160)</option>
+                                <option value="mobile">Mobile (1080x1920)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Download Button & Progress Bar container -->
+                        <div class="relative">
+                            <button id="dl-btn-1" onclick="startDownload(1)" class="w-full bg-dark text-white hover:bg-papaya font-bold py-3 px-6 text-xs uppercase tracking-widest transition-colors clip-slanted-button flex justify-center items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download Wallpaper
+                            </button>
+                            
+                            <!-- Progress overlay (hidden until download starts) -->
+                            <div id="dl-progress-container-1" class="hidden absolute inset-0 bg-dark text-white font-bold text-xs uppercase tracking-wider flex items-center justify-between px-6 clip-slanted-button overflow-hidden">
+                                <div id="dl-progress-bar-1" class="absolute left-0 top-0 bottom-0 bg-papaya/30 w-0 transition-all duration-300"></div>
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <svg class="animate-spin h-3.5 w-3.5 text-papaya" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                    Downloading...
+                                </span>
+                                <span id="dl-progress-pct-1" class="relative z-10 text-papaya">0%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="aspect-[3/4] bg-gray-800 rounded-sm overflow-hidden group cursor-pointer relative shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1563148154-1baf4974aae3?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" alt="Fan photo">
-                    <div class="absolute inset-0 bg-papaya/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            <!-- Wallpaper 3 -->
+            <div class="bg-light border border-gray-200 rounded-sm overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all duration-300 fade-in-up" style="transition-delay: 300ms;">
+                <div class="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800" alt="MP4/4 Wallpaper" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 text-xs font-bold text-white uppercase tracking-widest bg-papaya/90 px-2 py-1 rounded-sm">Heritage</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold uppercase mb-2 text-dark tracking-tight">Classic Heritage MP4/4</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Pay tribute to the legendary machine driven by Ayrton Senna and Alain Prost—the most dominant car in F1 history.</p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <!-- Resolution selector -->
+                        <div class="flex justify-between items-center">
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider font-semibold">Resolution</label>
+                            <select id="res-select-2" class="bg-white border border-gray-300 text-dark px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm focus:outline-none focus:border-papaya cursor-pointer">
+                                <option value="desktop">Desktop (3840x2160)</option>
+                                <option value="mobile">Mobile (1080x1920)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Download Button & Progress Bar container -->
+                        <div class="relative">
+                            <button id="dl-btn-2" onclick="startDownload(2)" class="w-full bg-dark text-white hover:bg-papaya font-bold py-3 px-6 text-xs uppercase tracking-widest transition-colors clip-slanted-button flex justify-center items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download Wallpaper
+                            </button>
+                            
+                            <!-- Progress overlay (hidden until download starts) -->
+                            <div id="dl-progress-container-2" class="hidden absolute inset-0 bg-dark text-white font-bold text-xs uppercase tracking-wider flex items-center justify-between px-6 clip-slanted-button overflow-hidden">
+                                <div id="dl-progress-bar-2" class="absolute left-0 top-0 bottom-0 bg-papaya/30 w-0 transition-all duration-300"></div>
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <svg class="animate-spin h-3.5 w-3.5 text-papaya" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                    Downloading...
+                                </span>
+                                <span id="dl-progress-pct-2" class="relative z-10 text-papaya">0%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,11 +459,68 @@
         </div>
     </footer>
     
+    <!-- Lightbox Modal for Papaya Moments -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeLightbox()">
+        <!-- Close button outside card -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/70 hover:text-white hover:rotate-90 transition-all duration-300 z-50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <!-- Lightbox Content Card -->
+        <div class="bg-dark border border-white/10 rounded-sm overflow-hidden max-w-4xl w-[90%] md:w-full flex flex-col md:flex-row shadow-2xl relative" onclick="event.stopPropagation()">
+            <!-- Left Side: Large Image -->
+            <div class="w-full md:w-3/5 aspect-square md:aspect-auto md:h-[70vh] bg-neutral-900 flex items-center justify-center overflow-hidden">
+                <img id="lightbox-img" class="w-full h-full object-contain" src="" alt="Lightbox moment" />
+            </div>
+            
+            <!-- Right Side: Details & Interactivity -->
+            <div class="w-full md:w-2/5 p-8 flex flex-col justify-between bg-dark border-t md:border-t-0 md:border-l border-white/10">
+                <div>
+                    <!-- Author header -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-papaya rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
+                            M
+                        </div>
+                        <div>
+                            <p id="lightbox-author" class="font-bold text-white text-base">@papaya_fan</p>
+                            <p class="text-xs text-gray-500 font-medium">McLaren Supporter</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Caption -->
+                    <p id="lightbox-caption" class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-medium">
+                        Silversone was absolutely electric this weekend! Chants of Lando all day long! 🏎️🇬🇧 #FansLikeNoOther
+                    </p>
+                </div>
+                
+                <!-- Bottom: Likes & Actions -->
+                <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <!-- Like Button (Heart SVG) -->
+                        <button id="lightbox-like-btn" onclick="toggleLikeCurrentPost()" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-papaya/10 transition-all active:scale-95 group shadow-inner">
+                            <svg id="lightbox-like-icon" class="w-6 h-6 text-gray-400 group-hover:text-papaya transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </button>
+                        <div>
+                            <span id="lightbox-like-count" class="font-bold text-white text-lg">124</span>
+                            <p class="text-xs text-gray-500 font-medium">likes</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Share moment option -->
+                    <button onclick="shareMoment()" class="text-xs font-bold text-papaya hover:text-orange-400 uppercase tracking-widest flex items-center gap-1.5 transition-colors">
+                        Share <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 10.742L12 12.75l3.316-2.008M12 12.75v-9M12 12.75L8.684 14.758M12 12.75l3.316 2.008M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Fixed Feedback Button -->
     <div class="fixed right-0 top-1/2 -translate-y-1/2 bg-papaya text-white text-xs font-bold uppercase tracking-widest py-3 px-1.5 rotate-180 hover:bg-orange-600 transition-colors cursor-pointer z-50" style="writing-mode: vertical-rl;">
         Feedback
     </div>
     <script src="js/main.js"></script>
+    <script src="js/fans.js"></script>
 </body>
 
 </html>
