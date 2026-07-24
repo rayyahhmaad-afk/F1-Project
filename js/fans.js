@@ -9,7 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     initQuiz();
     initMomentsGrid();
     initKeyboardEvents();
+    checkMembershipState();
 });
+
+function checkMembershipState() {
+    const memberDataStr = localStorage.getItem("mclarenPlusMember");
+    const joinBtn = document.getElementById("fans-join-btn");
+    if (joinBtn && memberDataStr) {
+        joinBtn.textContent = "Access Member Dashboard";
+    }
+}
 
 // ==========================================
 // 1. INTERACTIVE FAN POLL WIDGET

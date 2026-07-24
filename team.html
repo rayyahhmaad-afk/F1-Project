@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>McLaren Racing | The Team</title>
+    <meta name="description" content="Meet the official McLaren Formula 1 driver lineup, Lando Norris and Oscar Piastri. Explore driver stats, head-to-head metrics, and our historic racing heritage." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;700;800;900&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
@@ -68,7 +69,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- Lando Norris Card -->
-            <div class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl" style="transition-delay: 100ms;">
+            <div onclick="openDriverModal('lando')" class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl" style="transition-delay: 100ms;">
                 <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" src="img/driver/Lando%20Norris%20%2726-desktop.jpg" onerror="this.src='https://images.unsplash.com/photo-1536259020464-9a8ffb26e031?q=80&w=1000&auto=format&fit=crop'" alt="Lando Norris" />
                 <div class="absolute -bottom-10 -right-4 text-[12rem] font-black text-white/10 z-0 transition-transform duration-700 group-hover:scale-110 pointer-events-none">04</div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-10"></div>
@@ -82,11 +83,10 @@
             </div>
 
             <!-- Oscar Piastri Card -->
-            <div class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl mt-0 md:mt-16" style="transition-delay: 200ms;">
+            <div onclick="openDriverModal('oscar')" class="relative group cursor-pointer overflow-hidden aspect-[3/4] md:aspect-[4/5] bg-dark fade-in-up rounded-sm shadow-2xl mt-0 md:mt-16" style="transition-delay: 200ms;">
                 <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" src="img/driver/Oscar%20Piastri%20%2726-desktop.jpg" onerror="this.src='https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=1000&auto=format&fit=crop'" alt="Oscar Piastri" />
                 <div class="absolute -bottom-10 -right-4 text-[12rem] font-black text-white/10 z-0 transition-transform duration-700 group-hover:scale-110 pointer-events-none">81</div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-10"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 font-medium">
                     <div class="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                         <p class="text-papaya font-bold text-2xl mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">#81</p>
                         <h3 class="text-white text-5xl font-black uppercase mb-4 tracking-tighter">Oscar<br>Piastri</h3>
@@ -97,7 +97,55 @@
         </div>
     </section>
 
-    <!-- LEADERSHIP SECTION -->
+    <!-- DRIVER COMPARISON SECTION -->
+    <section class="py-24 px-8 max-w-5xl mx-auto bg-dark text-white border-y border-white/10 relative overflow-hidden rounded-sm shadow-2xl">
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-papaya/10 rounded-full blur-[80px] pointer-events-none"></div>
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="mb-16 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-white tracking-tighter">Head-to-Head</h2>
+            <p class="text-gray-400 text-sm mt-2 uppercase tracking-widest font-bold">2026 Driver Metrics Comparison</p>
+            <div class="w-12 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-3 items-center gap-4 text-center max-w-3xl mx-auto">
+            <!-- Headers -->
+            <div class="text-left font-black uppercase text-lg text-papaya">Lando Norris</div>
+            <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Metric</div>
+            <div class="text-right font-black uppercase text-lg text-white opacity-80" id="piastri-header">Oscar Piastri</div>
+
+            <!-- Metric Row 1 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-papaya">138</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">GP Entries</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">72</div>
+
+            <!-- Metric Row 2 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-papaya">12</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">Wins</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">4</div>
+
+            <!-- Metric Row 3 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-papaya">34</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">Podiums</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">18</div>
+
+            <!-- Metric Row 4 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-papaya">10</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">Pole Positions</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">3</div>
+
+            <!-- Metric Row 5 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-papaya">1124</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">Career Points</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">540</div>
+
+            <!-- Metric Row 6 -->
+            <div class="text-left py-4 border-b border-white/5 font-black text-2xl text-gray-300">1st</div>
+            <div class="py-4 border-b border-white/5 text-xs uppercase tracking-widest text-gray-400 font-bold">Best Grid Position</div>
+            <div class="text-right py-4 border-b border-white/5 font-black text-2xl text-gray-300">1st</div>
+        </div>
+    </section>
+
     <section class="py-24 px-8 max-w-7xl mx-auto bg-white">
         <div class="mb-16 fade-in-up text-center">
             <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Formula 1 Leadership</h2>
@@ -302,6 +350,138 @@
                     <img src="https://ui-avatars.com/api/?name=Nyck+de+Vries&background=111111&color=FF8000&size=200" class="w-full h-full object-cover" alt="Nyck de Vries" />
                 </div>
                 <h3 class="text-lg font-black uppercase text-dark">Nyck de Vries</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HERITAGE TIMELINE SECTION -->
+    <section class="py-24 px-8 max-w-5xl mx-auto bg-light border-y border-gray-200">
+        <div class="mb-16 fade-in-up text-center">
+            <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Our Heritage Timeline</h2>
+            <p class="text-gray-600 text-sm mt-2 uppercase tracking-widest font-bold">Pivotal milestones in McLaren Racing History</p>
+            <div class="w-12 h-1 bg-papaya mt-4 mx-auto"></div>
+        </div>
+
+        <div class="relative border-l-2 border-gray-300 max-w-3xl mx-auto pl-8 space-y-12 py-4">
+            <!-- Timeline Item 1 -->
+            <div class="relative fade-in-up timeline-item group">
+                <!-- Dot indicator -->
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(0)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">1963</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        The Foundation by Bruce McLaren
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            At just 26 years old, visionary driver and engineer Bruce McLaren founded Bruce McLaren Motor Racing. Guided by his ethos: "To do something well is so worthwhile that to die trying to do it better is not folly," the team set off to rewrite motor racing history.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(1)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">1968</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        First Grand Prix Victory
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            Bruce McLaren himself drove to victory at the Belgian Grand Prix at Spa-Francorchamps, securing the team's first-ever Formula 1 win. This paved the way for generations of race-winning legacy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(2)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">1974</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        First Constructors' World Championship
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            Led by Emerson Fittipaldi, McLaren won its first-ever F1 Constructors' World Championship title, starting a streak of decade-long triumphs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(3)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">1988</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        The Senna-Prost Golden Era
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            McLaren entered an unmatched golden era with Ayrton Senna and Alain Prost winning 15 out of 16 races in the legendary MCL4/4. Senna won the Drivers' Championship, cementing his place as an F1 legend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(4)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">1998</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        Mika Häkkinen's Double Dominance
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            Finnish flying driver Mika Häkkinen clinched the 1998 Drivers' World Championship, bringing the silver-and-black McLaren cars to the peak of international motorsport.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(5)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">2008</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        Hamilton's Last-Lap Championship
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            In one of the most dramatic F1 finales ever, Lewis Hamilton secured the Drivers' Championship with a last-lap pass at the Brazilian Grand Prix, adding another historic crown to the team's trophy case.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 7 -->
+            <div class="relative fade-in-up timeline-item group">
+                <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full border-4 border-light bg-gray-300 group-hover:bg-papaya group-hover:border-papaya/30 transition-all duration-300 flex items-center justify-center"></div>
+                <div class="cursor-pointer" onclick="toggleTimeline(6)">
+                    <span class="text-xs font-black text-papaya uppercase tracking-widest">2026</span>
+                    <h3 class="text-2xl font-black uppercase text-dark mt-1 flex justify-between items-center group-hover:text-papaya transition-colors">
+                        The Masterclass & New Era
+                        <svg class="timeline-chevron w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h3>
+                    <div class="timeline-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="text-gray-600 leading-relaxed mt-3 font-medium">
+                            Entering a brand new generation of engine regulations, McLaren once again redefined speed. Combining premium hybrid engine engineering with aerodynamic genius, Lando and Oscar led the papaya army to new heights.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -566,10 +746,22 @@
         </div>
     </footer>
     
+    <!-- Driver Biography & Stats Modal -->
+    <div id="driver-modal" class="fixed inset-0 flex items-center justify-center hidden z-50 p-4">
+        <div id="driver-overlay" class="fixed inset-0 bg-black/80 opacity-0 transition-opacity duration-300"></div>
+        <div class="relative bg-dark border border-white/15 w-full max-w-3xl rounded-md overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 p-8 z-10 text-white max-h-[95vh] overflow-y-auto">
+            <button id="driver-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2 text-xl font-bold">✕</button>
+            <div id="driver-content">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
     <!-- Fixed Feedback Button -->
     <div class="fixed right-0 top-1/2 -translate-y-1/2 bg-papaya text-white text-xs font-bold uppercase tracking-widest py-3 px-1.5 rotate-180 hover:bg-orange-600 transition-colors cursor-pointer z-50" style="writing-mode: vertical-rl;">
         Feedback
     </div>
+    <script src="js/team.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>McLaren Racing | Official Store</title>
+    <meta name="description" content="Shop the official McLaren Formula 1 team collection. Find replica team T-shirts, driver caps, essential hoodies, and accessories." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;700;800;900&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
@@ -29,6 +30,13 @@
                 </div>
             </div>
             <div class="flex items-center gap-6">
+                <!-- Cart Trigger Button -->
+                <button id="cart-toggle-btn" class="relative p-2 text-gray-600 hover:text-dark transition-colors focus:outline-none" aria-label="Open Cart">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <span id="cart-count-badge" class="absolute -top-1 -right-1 bg-papaya text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center border-2 border-white scale-0 transition-transform duration-300">0</span>
+                </button>
                 <button class="hidden md:block bg-papaya text-white px-6 py-2 text-sm font-bold clip-slanted-button hover:bg-orange-600 transition-colors">McLAREN+</button>
             </div>
         </div>
@@ -55,81 +63,26 @@
 
     <!-- SHOP GRID SECTION -->
     <section class="py-24 px-8 max-w-7xl mx-auto bg-white">
-        <div class="flex justify-between items-end mb-12 fade-in-up">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 fade-in-up">
             <h2 class="text-4xl md:text-5xl font-black uppercase text-dark tracking-tighter">Featured Items</h2>
-            <div class="hidden md:flex gap-6">
-                <button class="text-sm font-bold uppercase tracking-widest text-dark border-b-2 border-papaya pb-1">All</button>
-                <button class="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-dark transition-colors pb-1">Mens</button>
-                <button class="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-dark transition-colors pb-1">Womens</button>
-                <button class="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-dark transition-colors pb-1">Accessories</button>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Product 1 -->
-            <div class="group cursor-pointer fade-in-up" style="transition-delay: 100ms;">
-                <div class="relative bg-gray-100 aspect-[4/5] mb-4 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Team T-Shirt">
-                    <div class="absolute top-4 left-4 bg-papaya text-white text-[10px] font-bold uppercase px-2 py-1">New</div>
-                    <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
+                <!-- Text Search -->
+                <div class="relative flex-1 sm:w-64">
+                    <input type="text" id="product-search" placeholder="Search merchandise..." class="w-full bg-light border border-gray-200 text-dark px-4 py-2.5 pl-10 focus:outline-none focus:border-papaya rounded-sm text-sm">
+                    <svg class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold uppercase tracking-wide text-dark group-hover:text-papaya transition-colors">Team T-Shirt</h3>
-                        <p class="text-gray-500 text-sm">2024 Replica</p>
-                    </div>
-                    <span class="font-bold text-dark">$60.00</span>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="group cursor-pointer fade-in-up" style="transition-delay: 200ms;">
-                <div class="relative bg-gray-100 aspect-[4/5] mb-4 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Team Cap">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold uppercase tracking-wide text-dark group-hover:text-papaya transition-colors">Lando Norris Cap</h3>
-                        <p class="text-gray-500 text-sm">Official Teamwear</p>
-                    </div>
-                    <span class="font-bold text-dark">$45.00</span>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="group cursor-pointer fade-in-up" style="transition-delay: 300ms;">
-                <div class="relative bg-gray-100 aspect-[4/5] mb-4 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Hoodie">
-                    <div class="absolute top-4 left-4 bg-dark text-white text-[10px] font-bold uppercase px-2 py-1">Bestseller</div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold uppercase tracking-wide text-dark group-hover:text-papaya transition-colors">Core Hoodie</h3>
-                        <p class="text-gray-500 text-sm">Essentials Collection</p>
-                    </div>
-                    <span class="font-bold text-dark">$90.00</span>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="group cursor-pointer fade-in-up" style="transition-delay: 400ms;">
-                <div class="relative bg-gray-100 aspect-[4/5] mb-4 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Backpack">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold uppercase tracking-wide text-dark group-hover:text-papaya transition-colors">Travel Backpack</h3>
-                        <p class="text-gray-500 text-sm">Accessories</p>
-                    </div>
-                    <span class="font-bold text-dark">$110.00</span>
+                <!-- Category Filters -->
+                <div class="flex gap-2 overflow-x-auto pb-1 sm:pb-0" id="category-filters">
+                    <button data-category="all" class="text-xs font-bold uppercase tracking-widest px-4 py-2 bg-dark text-white rounded-sm transition-all duration-300">All</button>
+                    <button data-category="mens" class="text-xs font-bold uppercase tracking-widest px-4 py-2 bg-light text-gray-500 hover:text-dark rounded-sm transition-all duration-300">Mens</button>
+                    <button data-category="womens" class="text-xs font-bold uppercase tracking-widest px-4 py-2 bg-light text-gray-500 hover:text-dark rounded-sm transition-all duration-300">Womens</button>
+                    <button data-category="accessories" class="text-xs font-bold uppercase tracking-widest px-4 py-2 bg-light text-gray-500 hover:text-dark rounded-sm transition-all duration-300">Accessories</button>
                 </div>
             </div>
         </div>
 
-        <div class="mt-16 text-center fade-in-up">
-            <button class="border-2 border-dark text-dark font-bold px-10 py-4 uppercase tracking-widest hover:bg-dark hover:text-white transition-all duration-300 clip-slanted-button">
-                View All Products
-            </button>
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 min-h-[400px]">
+            <!-- Dynamically populated by shop.js -->
         </div>
     </section>
 
@@ -223,10 +176,145 @@
         </div>
     </footer>
     
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/60 hidden opacity-0 transition-opacity duration-300 z-50"></div>
+    <!-- Shopping Cart Drawer Panel -->
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-dark text-white shadow-2xl z-50 transform translate-x-full transition-transform duration-500 flex flex-col">
+        <div class="p-6 border-b border-white/10 flex justify-between items-center bg-neutral-950">
+            <h2 class="text-2xl font-black uppercase tracking-tight flex items-center gap-2">
+                <span class="w-3 h-3 bg-papaya clip-slanted inline-block"></span> Cart
+            </h2>
+            <button id="cart-close-btn" class="text-gray-400 hover:text-white transition-colors p-2 text-xl font-bold">✕</button>
+        </div>
+        <!-- Cart Items -->
+        <div id="cart-items-container" class="flex-1 overflow-y-auto">
+            <!-- Populated by JS -->
+        </div>
+        <!-- Cart Summary Footer -->
+        <div class="p-6 border-t border-white/10 bg-neutral-950">
+            <div class="space-y-3 mb-6">
+                <div class="flex justify-between text-sm text-gray-400">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal" class="font-bold text-white">$0.00</span>
+                </div>
+                <div class="flex justify-between text-sm text-gray-400">
+                    <span>Estimated Shipping</span>
+                    <span id="cart-shipping" class="font-bold text-white">$0.00</span>
+                </div>
+                <div class="border-t border-white/10 pt-3 flex justify-between text-base font-bold">
+                    <span class="text-papaya">Total</span>
+                    <span id="cart-total" class="text-white">$0.00</span>
+                </div>
+            </div>
+            <button id="checkout-btn" class="w-full bg-papaya text-white font-bold py-4 uppercase tracking-widest hover:bg-orange-600 transition-colors clip-slanted-button">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickview-modal" class="fixed inset-0 flex items-center justify-center hidden z-50 p-4">
+        <div id="quickview-overlay" class="fixed inset-0 bg-black/80 opacity-0 transition-opacity duration-300"></div>
+        <div class="relative bg-dark border border-white/15 w-full max-w-3xl rounded-md overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 p-8 z-10 text-white max-h-[90vh] overflow-y-auto">
+            <button id="quickview-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-xl font-bold">✕</button>
+            <div id="quickview-content">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 flex items-center justify-center hidden z-50 p-4">
+        <div id="checkout-overlay" class="fixed inset-0 bg-black/80 opacity-0 transition-opacity duration-300"></div>
+        <div class="relative bg-dark border border-white/15 w-full max-w-xl rounded-md overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 p-8 z-10 text-white max-h-[90vh] overflow-y-auto">
+            <button id="checkout-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2 text-xl font-bold">✕</button>
+            
+            <div class="mb-6">
+                <h3 class="text-2xl font-black uppercase text-white mb-2">Simulated Checkout</h3>
+                <p class="text-gray-400 text-sm font-medium">Please enter your shipping information to complete the order.</p>
+            </div>
+
+            <form id="checkout-form" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">First Name</label>
+                        <input type="text" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Last Name</label>
+                        <input type="text" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Email Address</label>
+                    <input type="email" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Shipping Address</label>
+                    <input type="text" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="col-span-2">
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">City</label>
+                        <input type="text" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Postal Code</label>
+                        <input type="text" required class="w-full bg-neutral-900 border border-white/20 text-white px-3 py-2 focus:outline-none focus:border-papaya transition-colors rounded-sm text-sm font-medium">
+                    </div>
+                </div>
+
+                <!-- Order Summary inside form -->
+                <div class="bg-neutral-900 border border-white/10 p-4 rounded-sm mt-6">
+                    <h4 class="text-xs font-bold uppercase text-papaya tracking-wider mb-2">Order Summary</h4>
+                    <div id="checkout-items-summary" class="max-h-32 overflow-y-auto mb-4 pr-2">
+                        <!-- List of items -->
+                    </div>
+                    <div class="space-y-1.5 border-t border-white/10 pt-3 text-xs">
+                        <div class="flex justify-between text-gray-400">
+                          <span>Subtotal:</span>
+                          <span id="checkout-subtotal" class="font-bold text-white">$0.00</span>
+                        </div>
+                        <div class="flex justify-between text-gray-400">
+                          <span>Shipping:</span>
+                          <span id="checkout-shipping" class="font-bold text-white">$0.00</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-sm text-white pt-1.5">
+                          <span>Total:</span>
+                          <span id="checkout-total" class="text-papaya">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-papaya text-white font-bold py-4 uppercase tracking-widest hover:bg-orange-600 transition-colors clip-slanted-button mt-4">
+                    Place Order (Simulated)
+                </button>
+            </form>
+
+            <!-- Success State -->
+            <div id="checkout-success-step" class="hidden text-center py-8 space-y-6">
+                <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-black shadow-lg">✓</div>
+                <div>
+                    <h3 class="text-2xl font-black uppercase text-emerald-400 mb-2">Order Confirmed!</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed max-w-sm mx-auto font-medium">Thank you for your simulated purchase. Your order has been registered successfully!</p>
+                </div>
+                <div class="bg-neutral-900 border border-white/10 py-3 px-6 rounded-sm inline-block font-mono text-xs text-gray-300">
+                    Order ID: <span id="success-order-id" class="text-white font-bold">#MCL-ORD-000000</span>
+                </div>
+                <div>
+                    <button onclick="closeCheckout()" class="bg-papaya text-white font-bold py-3 px-8 uppercase tracking-widest hover:bg-orange-600 transition-colors clip-slanted-button">
+                        Back to Shop
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Fixed Feedback Button -->
     <div class="fixed right-0 top-1/2 -translate-y-1/2 bg-papaya text-white text-xs font-bold uppercase tracking-widest py-3 px-1.5 rotate-180 hover:bg-orange-600 transition-colors cursor-pointer z-50" style="writing-mode: vertical-rl;">
         Feedback
     </div>
+    <script src="js/shop.js"></script>
     <script src="js/main.js"></script>
 </body>
 
